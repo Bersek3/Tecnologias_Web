@@ -8,5 +8,6 @@ Archivos y proyectos de Tecnologias web y moviles
 - Laboratorios
 - Parciales
 - Proyectos
+- Retos
 
 

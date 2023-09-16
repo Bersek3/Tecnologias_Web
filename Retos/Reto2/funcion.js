@@ -7,7 +7,7 @@ function calcularPromedio() {
         nota1 < 1.0 || nota1 > 7.0 ||
         nota2 < 1.0 || nota2 > 7.0 ||
         nota3 < 1.0 || nota3 > 7.0) {
-      alert("Ingrese notas válidas en el rango de 1.0 a 7.0.");
+      alert("Ingrese notas válidas (1.0 a 7.0 )");
       return;
     }
   

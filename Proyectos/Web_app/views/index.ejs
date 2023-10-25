@@ -5,29 +5,34 @@
   <title>Pagina</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="./index1.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="./index.css">
 
 </head>
 <body>
 <!-- partial:index.partial.html -->
-<div class="landingpage">
+<div id="inicio"class="landingpage">
   <div class="navbar">
     <a class="navlogo">LOGO</a>
     <button class="hamburger">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
-          <path d="M3 12h18M3 6h18M3 18h18"/>
-        </svg>
-      </button>
+      <!-- Icono del menú -->
+    </button>
     <div class="navlinkwrap">
-      <span class="navlink selectedlink">Inicio</span>
-      <span class="navlink">Cursos</span>
-      <span class="navlink">Proximamente</span>
+      <!-- Agrega la clase 'navlink' a todas las palabras del menú -->
+      <span id="btn-inicio" class="navlink selectedlink" data-scroll-to="inicio">Inicio</span>
+      <span id="btn-cursos" class="navlink" data-scroll-to="cursos">Cursos</span>
+      <span id="btn-proximo" class="navlink" data-scroll-to="proximamente">Proximamente</span>
     </div>
     <div class="buttonwrap">
-        <a href="/login">
-            <button class="createbtn selectedbtn">CREATE</button>
-          </a>
-      <button class="createbtn">SIGN IN</button>
+<!-- Botón para abrir el modal -->
+<button id="openLoginModal" class="login-button">Iniciar Sesión</button>
+
+<!-- Contenedor oculto para el contenido del modal -->
+<div id="modalContainer" style="display: none;"></div>
+       <!-- Botón de cierre -->
+    <span id="closeModal" class="close-button">&times;</span>
+      <a href="/registro">
+        <button id="boton-2" class="createbtn selectedbtn highlight">Regístrate</button>
+      </a>
     </div>
   </div>
   <div class="box">
@@ -66,7 +71,7 @@
   </div>
   <div class="auction">
     <div class="title">
-      <p class="titlebold">Cursos Disponibles</p>
+      <p id= "cursos" class="titlebold">Cursos Disponibles</p>
       <p class="titleslim">Ver más</p>
     </div>
     <div class="nft">
@@ -161,7 +166,7 @@
       </div>
     </div>
   </div>
-  <div class="discover">
+  <div id="proximamente" class="discover">
     <div class="discover-title">
       <p>Proximos Cursos</p>
       <div class="filters">
@@ -277,6 +282,6 @@
   </div>
 </div>
 <!-- partial -->
-  
+  <script src='/index.js'></script>
 </body>
 </html>

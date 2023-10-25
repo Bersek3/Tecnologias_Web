@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CodePen - Bulma.io Full Width Menu ( Navbar)</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./panelweb.css">
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.min.css'>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+</head>
+<body>
+  <nav class="navbar navbar-fixed">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="">
+        <img src="" alt="" width="112" height="28">
+      </a>
+      <div class="navbar-burger burger" data-target="navMenubd-example">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  
+    <div id="navMenubd-example" class="navbar-menu">
+      <div class="navbar-start">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link is-active" href="/documentation/overview/start/">Cursos</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="/documentation/overview/start/">Programación</a>
+            <a class="navbar-item" href="http://bulma.io/documentation/modifiers/syntax/">Marketing</a>
+            <a class="navbar-item" href="http://bulma.io/documentation/columns/basics/">Diseño UX / UI</a>
+            <a class="navbar-item" href="http://bulma.io/documentation/layout/container/">Negocios</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <div class="field is-grouped">
+            <p class="control">
+              <a class="button is-primary" id="btn-login" href="/login">
+                <span>Iniciar Sesión</span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</nav>
+
+<div id="login-modal" class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-content">
+    <!-- Contenido del panel de inicio de sesión cargado desde login.ejs -->
+    <%= include('login') %>
+  </div>
+  <button class="modal-close is-large" id="close-modal" aria-label="close"></button>
+</div>
+  
+  <!-- Agrega el contenedor oculto para el formulario de inicio de sesión -->
+  <div id="login-container" class="hidden">
+    <div id="login-modal" class="modal">
+      <div class="modal-content">
+        <span class="close" id="close-modal">&times;</span>
+        <!-- Contenido del panel de inicio de sesión cargado desde login.ejs -->
+        <%= include('login') %>
+      </div>
+    </div>
+  </div>
+  
+
+  <section class="hero is-primary1 wallpaper-section">
+  <div class="hero-body1">
+    <div class="container">
+      <h1 class="title">
+        Aprende con los mejores cursos 
+      </h1>
+      <h2 class="subtitle">
+        De forma Gratis y entretenida
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h1 class="title">Cursos</h1>
+    <h3 class="subtitle">Accede a los mejores cursos online</h3>
+</section>
+<div class="panel-container">
+  <div class="panel">
+      <div class="imagen">
+          <img src="" alt="Imagen 1">
+      </div>
+      <div class="descripcion">
+        <h1><b>Introducción a After Effects</b></h1>
+          <p>Aprende After Effects sin conocimientos previos</p>
+      </div>
+      <div class="boton">
+          <button>Botón 1</button>
+      </div>
+  </div>
+  <div class="panel">
+      <div class="imagen">
+          <img src="imagen2.jpg" alt="Imagen 2">
+      </div>
+      <div class="descripcion">
+          <p>Descripción 2</p>
+      </div>
+      <div class="boton">
+          <button>Botón 2</button>
+      </div>
+  </div>
+  <div class="panel">
+      <div class="imagen">
+          <img src="imagen3.jpg" alt="Imagen 3">
+      </div>
+      <div class="descripcion">
+          <p>Descripción 3</p>
+      </div>
+      <div class="boton">
+          <button>Botón 3</button>
+      </div>
+  </div>
+  <div class="panel">
+      <div class="imagen">
+          <img src="imagen4.jpg" alt="Imagen 4">
+      </div>
+      <div class="descripcion">
+          <p>Descripción 4</p>
+      </div>
+      <div class="boton">
+          <button>Botón 4</button>
+      </div>
+  </div>
+  <div class="panel">
+    <div class="imagen">
+        <img src="imagen1.jpg" alt="Imagen 1">
+    </div>
+    <div class="descripcion">
+        <p>Descripción 1</p>
+    </div>
+    <div class="boton">
+        <button>Botón 1</button>
+    </div>
+</div>
+<div class="panel">
+    <div class="imagen">
+        <img src="imagen2.jpg" alt="Imagen 2">
+    </div>
+    <div class="descripcion">
+        <p>Descripción 2</p>
+    </div>
+    <div class="boton">
+        <button>Botón 2</button>
+    </div>
+</div>
+<div class="panel">
+    <div class="imagen">
+        <img src="imagen3.jpg" alt="Imagen 3">
+    </div>
+    <div class="descripcion">
+        <p>Descripción 3</p>
+    </div>
+    <div class="boton">
+        <button>Botón 3</button>
+    </div>
+</div>
+<div class="panel">
+    <div class="imagen">
+        <img src="imagen4.jpg" alt="Imagen 4">
+    </div>
+    <div class="descripcion">
+        <p>Descripción 4</p>
+    </div>
+    <div class="boton">
+        <button>Botón 4</button>
+    </div>
+</div>
+</div>
+
+
+<section class="hero is-primary2">
+  <div class="hero-body1">
+    <div class="container">
+      <h1 class="submenu"> Beneficios de aprender con nosotros</h1>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer">
+  <div class="row">
+  <a href="#"><i class="fa fa-facebook"></i></a>
+  <a href="#"><i class="fa fa-instagram"></i></a>
+  <a href="#"><i class="fa fa-youtube"></i></a>
+  <a href="#"><i class="fa fa-twitter"></i></a>
+  </div>
+  
+  <div class="row">
+  <ul>
+  <li><a href="#">Cursos</a></li>
+  <li><a href="#">Contactanos</a></li>
+  <li><a href="#">politica de privacidad</a></li>
+  <li><a href="#">Terminos y condiciones</a></li>
+  </ul>
+  </div>
+  
+  <div class="row">
+Copyright © 2023 - Todos los derechos reservados 
+  </div>
+  </div>
+  </footer>
+<!-- partial -->
+<script src="./script.js"></script>
+<script src="./emergente.js"></script>
+</body>
+</html>

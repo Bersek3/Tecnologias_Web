@@ -1,0 +1,14 @@
+    /* Estilos para el panel de inicio de sesión */
+    #login-panel {
+      position: fixed;
+      top: 0;
+      right: -300px; /* Inicialmente oculto fuera de la pantalla */
+      width: 300px;
+      height: 100%;
+      background: #fff;
+      transition: right 0.3s;
+    }
+
+    #login-panel.active {
+      right: 0; /* Mostrar el panel cuando tiene la clase 'active' */
+    }

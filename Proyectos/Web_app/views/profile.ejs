@@ -2,10 +2,10 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Responsive NFT Landing Page</title>
+  <title>Pagina</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="./perfil.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="./index.css">
 
 </head>
 <body>
@@ -18,17 +18,15 @@
           <path d="M3 12h18M3 6h18M3 18h18"/>
         </svg>
       </button>
-      <div class="navlinkwrap">
-        <span id="btn-inicio" class="navlink" data-scroll-to="inicio">Inicio</span>
-        <span id="btn-cursos" class="navlink" data-scroll-to="cursos">Cursos</span>
-        <span id="btn-proximo" class="navlink" data-scroll-to="proximamente">Proximamente</span>
+    <div class="navlinkwrap">
+      <span class="navlink selectedlink">Inicio</span>
+      <span class="navlink">Cursos</span>
+      <span class="navlink">Proximamente</span>
     </div>
-    <div class="buttonwrap">
-        <a href="/login">
-            <button class="createbtn selectedbtn">REGISTRATE</button>
-          </a>
-      <button class="createbtn">iNICIAR SESION</button>
-    </div>
+    <div class="buttonwrap">">
+          <button id="boton-2" class="createbtn selectedbtn highlight">Cerrar Sesion</button>
+      </a>
+  </div>
   </div>
   <div class="box">
     <div class="infobox">
@@ -64,7 +62,7 @@
       </div>
     </div>
   </div>
-  <div id="cursos" class="auction">
+  <div class="auction">
     <div class="title">
       <p class="titlebold">Cursos Disponibles</p>
       <p class="titleslim">Ver más</p>
@@ -162,7 +160,7 @@
     </div>
   </div>
   <div class="discover">
-    <div id="proximamente" class="discover-title">
+    <div class="discover-title">
       <p>Proximos Cursos</p>
       <div class="filters">
         <div class="filter">
@@ -277,6 +275,6 @@
   </div>
 </div>
 <!-- partial -->
-  <script src='./perfil.js'></script>
+  <script src='/index.js'></script>
 </body>
 </html>

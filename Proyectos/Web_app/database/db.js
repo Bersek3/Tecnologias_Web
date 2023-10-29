@@ -1,19 +1,18 @@
-const { MongoClient } = require('mongodb');
+// db.js
+const mongoose = require('mongoose');
 
-const uri = 'mongodb+srv://Berserk:Bersek1106@cluster0.krd1u.mongodb.net/Cursos'; // Cambia esto según tu configuración
+function connectToDatabase() {
+  mongoose.connect('mongodb+srv://Berserk:Bersek1106@cluster0.krd1u.mongodb.net/Cursos', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+  });
 
-const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+  const db = mongoose.connection;
 
-async function connectToDatabase() {
-  try {
-    await client.connect();
-    console.log('Conexión a MongoDB establecida');
-  } catch (err) {
-    console.error('Error al conectar a MongoDB:', err);
-  }
+  db.on('error', console.error.bind(console, 'Error de conexión a la base de datos:'));
+  db.once('open', () => {
+    console.log('Conectado a la base de datos');
+  });
 }
 
-module.exports = {
-  connectToDatabase,
-  getClient: () => client, // Devuelve el cliente MongoDB para su uso en las rutas
-};
+module.exports = { connectToDatabase };

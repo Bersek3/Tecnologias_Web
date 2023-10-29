@@ -1,44 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Registro - Curso en Línea</title>
-    <link rel="stylesheet" href="registro.css"> <!-- Asegúrate de ajustar la ruta correcta -->
+  <title>Regístrate</title>
+  <link rel="stylesheet" href="login.css">
 </head>
 <body>
-    <!-- Navbar similar al de Coursera -->
-    <nav class="navbar">
-        <!-- Contenido del navbar -->
-    </nav>
-
-    <div class="container">
-        <div class="registration-form">
-            <h1>Regístrate</h1>
-            <form action="/registro" method="post">
-                <div class="form-group">
-                    <input type="text" name="nombre" placeholder="Nombre completo" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" name="correo" placeholder="Correo Electrónico" required>
-                </div>
-                <div class="form-group">
-                    <input type="password" name="contraseña" placeholder="Contraseña" required>
-                </div>
-                <div class="form-group">
-                    <input type="password" name="contraseña_2" placeholder="Confirmar Contraseña" required>
-                </div>
-                <button class="button primary" type="submit">Registrarse</button>
-            </form>
-            <p>¿Ya tienes una cuenta? <a href="/login">Iniciar Sesión</a></p>
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <div class="form-box signup">
+        <h2>Regístrate</h2>
+      </div>
+      <div class="form-content">
+        <form action="/registro" method="POST" id="registration-form">
+          <div class="input-field">
+            <input type="text" name="username" required>
+            <label>Nombre de Usuario</label>
+          </div>
+          <div class="input-field">
+            <input type="text" name="email" required>
+            <label>Correo Electrónico</label>
+          </div>
+          <div class="input-field">
+            <input type="password" name="password" required>
+            <label>Contraseña</label>
+          </div>
+          <div class="policy-text">
+            <input type="checkbox" id="policy">
+            <label for="policy">
+              Acepto los
+              <a href="#" class="option">Términos y Condiciones</a>
+            </label>
+          </div>
+          <button id="submit-button" type="submit">Regístrate</button>
+        </form>
+        <div class="bottom-link">
+          ¿Ya tienes una cuenta?
+          <button id="login">Iniciar Sesión</button>
         </div>
+      </div>
     </div>
-
-    <!-- Pie de página -->
-    <footer>
-        <div class="footer">
-            <p>&copy; 2023 - Todos los derechos reservados</p>
-        </div>
-    </footer>
+  </div>
+  <script>
+  </script>
 </body>
 </html>

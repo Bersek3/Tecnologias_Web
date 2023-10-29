@@ -1,112 +1,239 @@
-/* styles.css */
+/* Importing Google font - Open Sans */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
 
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f2f2f2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
+
+
+
+.form-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+  max-width: 720px;
+  background: #fff;
+  border: 2px solid #fff;
+  transform: translate(-50%, -70%);
 }
 
-.login-container {
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 400px;
-  padding: 20px;
+.show-popup .form-popup {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s ease, opacity 0.1s;
+}
+
+.form-popup .close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  color: #878484;
+  cursor: pointer;
+}
+
+
+.show-popup .blur-bg-overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.form-popup .form-box {
+  display: flex;
+}
+
+.form-box .form-details {
+  width: 100%;
+  color: #fff;
+  max-width: 330px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.form-box .form-content {
+  width: 100%;
+  padding: 35px;
+}
+
+.form-box h2 {
+  text-align: center;
+  margin-bottom: 29px;
+}
+
+form .input-field {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.input-field input {
+  height: 100%;
+  width: 100%;
+  background: none;
+  outline: none;
+  font-size: 0.95rem;
+  padding: 0 15px;
+  border: 1px solid #717171;
+  border-radius: 3px;
+}
+
+.input-field input:focus {
+  border: 1px solid #362041;
+}
+
+.input-field label {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  color: #4a4646;
+  pointer-events: none;
+  transition: 0.2s ease;
+}
+
+.input-field input:is(:focus, :valid) {
+  padding: 16px 15px 0;
+}
+
+.input-field input:is(:focus, :valid) ~ label {
+  transform: translateY(-120%);
+  color: #362041;
+  font-size: 0.75rem;
+}
+
+.form-box a {
+  color: #362041;
+  text-decoration: none;
+}
+
+.form-box a:hover {
+  text-decoration: underline;
+}
+
+form :where(.forgot-pass-link, .policy-text) {
+  display: inline-flex;
+  margin-top: 13px;
+  font-size: 0.95rem;
+}
+
+form button {
+  width: 100%;
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 14px 0;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 3px;
+  cursor: pointer;
+  margin: 25px 0;
+  background: #362041;
+  transition: 0.2s ease;
+}
+
+form button:hover {
+  background: #2b0933;
+}
+
+.form-content .bottom-link {
   text-align: center;
 }
 
-.login-box h2 {
-  margin: 0 0 20px;
-  font-size: 24px;
-  color: #333;
+.form-popup .signup,
+.form-popup.show-signup .login {
+  display: none;
 }
 
-.form-group {
-  text-align: left;
-  margin-bottom: 20px;
+.form-popup.show-signup .signup {
+  display: flex;
 }
 
-label {
-  display: block;
-  margin-bottom: 5px;
-  color: #555;
+.signup .policy-text {
+  display: flex;
+  margin-top: 14px;
+  align-items: center;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="password"] {
-  width: 100%;
-  padding: 13px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 16px;
-  margin-left: -14px;
-
+.signup .policy-text input {
+  width: 14px;
+  height: 14px;
+  margin-right: 7px;
 }
 
-.login-button {
-  background-color: #0074a5;
-  color: #fff;
-  padding: 12px 0;
-  border: none;
-  border-radius: 3px;
-  font-size: 16px;
-  cursor: pointer;
-  width: 100%;
-}
+@media (max-width: 950px) {
+  .navbar :is(.hamburger-btn, .close-btn) {
+    display: block;
+  }
 
-.separator {
-  background-color: #ddd;
-  height: 1px;
-  margin: 20px 0;
-}
+  .navbar {
+    padding: 15px 0;
+  }
 
-.login-options a {
-  display: block;
-  margin-bottom: 10px;
-  color: #0074a5;
-  text-decoration: none;
-  font-size: 16px;
-}
+  .navbar .logo img {
+    display: none;
+  }
 
-.social-button {
-  background-color: #0074a5;
-  color: #fff;
-  padding: 12px 0;
-  border: none;
-  border-radius: 3px;
-  font-size: 16px;
-  cursor: pointer;
-  text-decoration: none;
-  width: 100%;
-  display: block;
-  margin-bottom: 10px;
-}
+  .navbar .logo h2 {
+    font-size: 1.4rem;
+  }
 
-.social-button:hover {
-  background-color: #005784;
-}
+  .navbar .links {
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    left: -100%;
+    display: block;
+    height: 100vh;
+    width: 100%;
+    padding-top: 60px;
+    text-align: center;
+    background: #fff;
+    transition: 0.2s ease;
+  }
 
-.login-options p {
-  font-size: 16px;
-}
+  .navbar .links.show-menu {
+    left: 0;
+  }
 
-.login-options a:hover {
-  text-decoration: underline;
-  color: #005784;
-}
+  .navbar .links a {
+    display: inline-flex;
+    margin: 20px 0;
+    font-size: 1.2rem;
+    color: #000;
+  }
 
-.login-box a {
-  text-decoration: none;
-  color: #0074a5;
-  font-size: 16px;
-}
+  .navbar .links a:hover {
+    color: #00bcd4;
+  }
 
-.login-box a:hover {
-  text-decoration: underline;
-  color: #005784;
+  .navbar .login-btn {
+    font-size: 0.9rem;
+    padding: 7px 10px;
+  }
+}
+/* Estilos para dispositivos móviles */
+/* Estilos para dispositivos móviles */
+@media (max-width: 760px) {
+  .modal-content {
+    width: 90%;
+    max-width: 400px; /* O el ancho deseado para dispositivos móviles */
+    margin: 0 auto;
+  }
+
+  .form-content {
+    padding: 20px;
+  }
+  
+  .input-field {
+    margin: 15px 0;
+  }
+  
+  /* ... (otros estilos para dispositivos móviles) ... */
 }

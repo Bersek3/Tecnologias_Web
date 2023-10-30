@@ -1,4 +1,3 @@
-// Definir un modelo de curso en cursoModel.js
 const mongoose = require('mongoose');
 
 const courseSchema = new mongoose.Schema({

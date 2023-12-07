@@ -4,7 +4,7 @@ Este proyecto Flutter contiene dos pantallas principales: una pantalla de carrus
 
 ## Pantalla de Carrusel
 
-La pantalla de carrusel muestra un carrusel de imágenes. Las imágenes se cargan desde los activos locales del proyecto.
+La pantalla de carrusel muestra un carrusel de imágenes. Las imágenes se cargan desde los archivos locales del proyecto.
 
 ## Pantalla de Perfil de Usuario
 

@@ -5,11 +5,10 @@ Archivos y proyectos de Tecnologias web y moviles
 
 
 ## Características Destacadas
-- Guias
+- Actividades
 - Laboratorios
 - Parciales
 - Proyectos
-- Retos
 
 
 

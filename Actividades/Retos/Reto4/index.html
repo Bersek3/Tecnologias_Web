@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora de IMC</title>
+    <link rel="stylesheet" type="text/css" href="C:\Users\TMC_ROBOTICA\Desktop\Reto4\public\css\diseno.css">
+</head>
+<body>
+    <h1>Calculadora de IMC</h1>
+    <form id="imcForm">
+        <label for="nombre">Nombre del paciente:</label>
+        <input type="text" id="nombre" required><br>
+        
+        <label for="peso">Peso (kg):</label>
+        <input type="number" id="peso" step="0.01" required><br>
+        
+        <label for="altura">Altura (ej: 1.70):</label>
+        <input type="number" id="altura" step="0.01" required><br>
+        
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" required><br>
+        
+        <label for="genero">Género:</label>
+        <select id="genero">
+            <option value="masculino">Masculino</option>
+            <option value="femenino">Femenino</option>
+        </select><br>
+        
+        <label for="actividad">Nivel de actividad física:</label>
+        <select id="actividad">
+            <option value="sedentario">Sedentario</option>
+            <option value="moderado">Moderado</option>
+            <option value="activo">Activo</option>
+        </select><br>
+        
+        <input type="button" value="Calcular" onclick="calcularIMC()">
+    </form>
+
+        <script src="C:\Users\TMC_ROBOTICA\Desktop\Reto4\public\js\script.js"></script>
+</body>
+</html>

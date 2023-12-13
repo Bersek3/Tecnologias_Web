@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="C:\Users\TMC_ROBOTICA\Desktop\Reto3\diseño.css">
+    <title>Calculadora de Propina</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Propina</h1>
+        <label for="total">Total de la Boleta:</label>
+        <input type="number" id="total">
+        <label for="porcentaje">Porcentaje de Propina:</label>
+        <select id="porcentaje">
+            <option value="10">10%</option>
+            <option value="15">15%</option>
+            <option value="20">20%</option>
+            <option value="30">30%</option>
+        </select>
+        <button id="calcular">Calcular Propina</button>
+        <div id="resultado">
+            Propina: <span id="propina"></span> CLP<br>
+            Total a pagar: <span id="totalAPagar"></span> CLP
+        </div>
+    </div>
+    <script src="C:\Users\TMC_ROBOTICA\Desktop\Reto3\function.js"></script>
+</body>
+</html>

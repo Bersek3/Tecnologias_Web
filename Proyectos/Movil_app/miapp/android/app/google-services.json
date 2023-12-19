@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "346649964592",
+    "firebase_url": "https://thread-63b92-default-rtdb.firebaseio.com",
+    "project_id": "thread-63b92",
+    "storage_bucket": "thread-63b92.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:346649964592:android:76a3961a7ee33fdbeb3df5",
+        "android_client_info": {
+          "package_name": "com.example.mi_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgi4OcUKvF3WOvVlKoK_5i-oUcu7IbjP0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
